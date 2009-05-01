@@ -19,18 +19,4 @@
 
 #ifndef _ABOUT_H
 #define _ABOUT_H
-
-#if !GTK_CHECK_VERSION(2, 6, 0)
-void add_about_stock(void);
-GtkWidget *create_about_dialog(
-	const gchar *name,
-	const gchar *version,
-	const gchar *copyright,
-	const gchar *comments,
-	const gchar **authors,
-	const gchar **documenters,
-	const gchar *translator_credits,
-	GdkPixbuf *logo);
-#endif
-
 #endif /* _ABOUT_H */

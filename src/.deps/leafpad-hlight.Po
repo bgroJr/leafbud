@@ -399,8 +399,7 @@ leafpad-hlight.o: hlight.c /usr/include/string.h /usr/include/features.h \
   /usr/include/glib-2.0/glib/gi18n.h /usr/include/libintl.h \
   /usr/include/locale.h /usr/include/bits/locale.h window.h menu.h \
   callback.h view.h undo.h font.h linenum.h indent.h hlight.h selector.h \
-  file.h encoding.h search.h dialog.h about.h dnd.h utils.h emacs.h \
-  gtkprint.h
+  file.h encoding.h search.h dialog.h dnd.h utils.h emacs.h gtkprint.h
 
 /usr/include/string.h:
 
@@ -1357,8 +1356,6 @@ encoding.h:
 search.h:
 
 dialog.h:
-
-about.h:
 
 dnd.h:
 

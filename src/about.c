@@ -253,29 +253,26 @@ static GtkWidget *my_gtk_about_new(
 	return dialog;
 }
 
-GtkWidget *create_about_dialog(
-	const gchar *name,
-	const gchar *version,
-	const gchar *copyright,
-	const gchar *comments,
-	const gchar **authors,
-	const gchar **documenters,
-	const gchar *translator_credits,
-	GdkPixbuf *logo)
+GtkWidget *create_about_dialog(const gchar *name,
+                               const gchar *version,
+                               const gchar *copyright,
+                               const gchar *comments,
+                               const gchar **authors,
+                               const gchar **documenters,
+                               const gchar *translator_credits,
+                               GdkPixbuf *logo)
 {
-	GtkWidget *about;
-	
-	about = my_gtk_about_new(
-		name,
-		version,
-		copyright,
-		comments,
-		authors,
-		documenters,
-		translator_credits,
-		logo);
-	
-	return about;
+  GtkWidget *about = 
+    my_gtk_about_new(name,
+                     version,
+                     copyright,
+                     comments,
+                     authors,
+                     documenters,
+                     translator_credits,
+                     logo);
+
+  return about;
 }
 #endif
 

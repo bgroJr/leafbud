@@ -47,7 +47,6 @@
 #include "encoding.h"
 #include "search.h"
 #include "dialog.h"
-#include "about.h"
 #include "dnd.h"
 #include "utils.h"
 #include "emacs.h"

@@ -399,7 +399,7 @@ leafpad-main.o: main.c leafpad.h ../config.h \
   /usr/include/endian.h /usr/include/bits/endian.h /usr/include/stdlib.h \
   /usr/include/bits/string3.h window.h menu.h callback.h view.h undo.h \
   font.h linenum.h indent.h hlight.h selector.h file.h encoding.h \
-  search.h dialog.h about.h dnd.h utils.h emacs.h gtkprint.h \
+  search.h dialog.h dnd.h utils.h emacs.h gtkprint.h \
   /usr/include/glib-2.0/glib/gstdio.h \
   /usr/include/glib-2.0/glib/gprintf.h /usr/include/sys/stat.h \
   /usr/include/bits/stat.h /usr/include/sys/types.h \
@@ -1362,8 +1362,6 @@ encoding.h:
 search.h:
 
 dialog.h:
-
-about.h:
 
 dnd.h:
 

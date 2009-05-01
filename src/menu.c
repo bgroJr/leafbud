@@ -103,11 +103,7 @@ static GtkItemFactoryEntry menu_items[] =
 	{ N_("/_Help"), NULL,
 		NULL, 0, "<Branch>" },
 	{ N_("/Help/_About"), NULL,
-#if GTK_CHECK_VERSION(2, 6, 0)
-		G_CALLBACK(on_help_about), 0, "<StockItem>", GTK_STOCK_ABOUT },
-#else
-		G_CALLBACK(on_help_about), 0, "<StockItem>", "my-gtk-about" },
-#endif
+	G_CALLBACK(on_help_about), 0, "<StockItem>", GTK_STOCK_ABOUT }
 };
 
 static gint nmenu_items = sizeof(menu_items) / sizeof(GtkItemFactoryEntry);
