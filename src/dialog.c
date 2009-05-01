@@ -79,7 +79,7 @@ gint run_dialog_message_question(GtkWidget *window, gchar *message, ...)
 	va_list ap;
 	GtkWidget *dialog;
 	gchar *str;
-	gint res;
+	gint result;
 	
 	va_start(ap, message);
 		str = g_strdup_vprintf(message, ap);
@@ -88,8 +88,8 @@ gint run_dialog_message_question(GtkWidget *window, gchar *message, ...)
 	dialog = create_dialog_message_question(window, str);
 	g_free(str);
 	
-	res = gtk_dialog_run(GTK_DIALOG(dialog));
+	result = gtk_dialog_run(GTK_DIALOG(dialog));
 	gtk_widget_destroy(dialog);
 	
-	return res;
+	return result;
 }
