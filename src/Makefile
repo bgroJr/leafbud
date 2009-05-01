@@ -180,7 +180,6 @@ leafpad_SOURCES = \
 	dialog.h dialog.c \
 	gtkprint.h gtkprint.c \
 	gnomeprint.h gnomeprint.c \
-	about.h about.c \
 	dnd.h dnd.c \
 	utils.h utils.c \
 	emacs.h emacs.c \
@@ -206,7 +205,7 @@ am_leafpad_OBJECTS = leafpad-main.$(OBJEXT) leafpad-window.$(OBJEXT) \
 	leafpad-selector.$(OBJEXT) leafpad-file.$(OBJEXT) \
 	leafpad-encoding.$(OBJEXT) leafpad-search.$(OBJEXT) \
 	leafpad-dialog.$(OBJEXT) leafpad-gtkprint.$(OBJEXT) \
-	leafpad-gnomeprint.$(OBJEXT) leafpad-about.$(OBJEXT) \
+	leafpad-gnomeprint.$(OBJEXT) \
 	leafpad-dnd.$(OBJEXT) leafpad-utils.$(OBJEXT) \
 	leafpad-emacs.$(OBJEXT) leafpad-gtksourceiter.$(OBJEXT)
 leafpad_OBJECTS = $(am_leafpad_OBJECTS)
