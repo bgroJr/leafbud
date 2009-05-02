@@ -38,10 +38,6 @@ enum {
 
 static GtkTargetEntry drag_types[] =
 {
-#if !GTK_CHECK_VERSION(2, 10, 0)
-//	{ "application/x-gtk-text-buffer-rich-text", GTK_TARGET_SAME_WIDGET, TARGET_SELF },
-	{ "GTK_TEXT_BUFFER_CONTENTS", GTK_TARGET_SAME_WIDGET, TARGET_SELF },
-#endif
 	{ "UTF8_STRING", 0, TARGET_UTF8_STRING },
 	{ "COMPOUND_TEXT", 0, TARGET_COMPOUND_TEXT },
 	{ "text/plain", 0, TARGET_PLAIN },
@@ -99,12 +95,8 @@ static void dnd_drag_data_recieved_handler(GtkWidget *widget,
 #endif
 DV(g_print("DND start!\n"));
 	
-#if GTK_CHECK_VERSION(2, 10, 0)
 	if (g_strcasecmp(gdk_atom_name(context->targets->data),
 	    "GTK_TEXT_BUFFER_CONTENTS") != 0) {
-#else
-	if (info != TARGET_SELF) {
-#endif
 		if (flag_called_once) {
 			flag_called_once = FALSE;
 			g_signal_stop_emission_by_name(widget, "drag_data_received");
@@ -165,11 +157,7 @@ DV(g_print(">%s\n", comline));
 	else {
 		clear_current_keyval();
 		undo_set_sequency(FALSE);
-#if GTK_CHECK_VERSION(2, 10, 0)
 		if (info == TARGET_UTF8_STRING) {
-#else
-		if (info == TARGET_SELF) {
-#endif
 			undo_set_sequency_reserve();
 			context->action = GDK_ACTION_MOVE;
 		} else if (info == TARGET_PLAIN 
