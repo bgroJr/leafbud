@@ -28,9 +28,7 @@
 #include "i18n.h"
 
 #ifndef ENABLE_PRINT
-#	if GTK_CHECK_VERSION(2, 10, 0)
-#		define ENABLE_PRINT
-#	endif
+#define ENABLE_PRINT
 #endif
 
 #include "window.h"
@@ -51,11 +49,7 @@
 #include "utils.h"
 #include "emacs.h"
 #ifdef ENABLE_PRINT
-#	if GTK_CHECK_VERSION(2, 10, 0)
-#		include "gtkprint.h"
-#	else
-#		include "gnomeprint.h"
-#	endif
+#include "gtkprint.h"
 #endif
 
 typedef struct {
