@@ -178,7 +178,6 @@ leafpad_SOURCES = \
 	encoding.h encoding.c \
 	search.h search.c \
 	dialog.h dialog.c \
-	gtkprint.h gtkprint.c \
 	dnd.h dnd.c \
 	utils.h utils.c \
 	gtksourceiter.h gtksourceiter.c \
@@ -202,7 +201,7 @@ am_leafpad_OBJECTS = leafpad-main.$(OBJEXT) leafpad-window.$(OBJEXT) \
 	leafpad-indent.$(OBJEXT) leafpad-hlight.$(OBJEXT) \
 	leafpad-selector.$(OBJEXT) leafpad-file.$(OBJEXT) \
 	leafpad-encoding.$(OBJEXT) leafpad-search.$(OBJEXT) \
-	leafpad-dialog.$(OBJEXT) leafpad-gtkprint.$(OBJEXT) \
+	leafpad-dialog.$(OBJEXT) \
 	leafpad-dnd.$(OBJEXT) leafpad-utils.$(OBJEXT) \
 	leafpad-gtksourceiter.$(OBJEXT)
 leafpad_OBJECTS = $(am_leafpad_OBJECTS)
@@ -219,7 +218,6 @@ DEP_FILES = ./$(DEPDIR)/leafpad-about.Po \
 	./$(DEPDIR)/leafpad-encoding.Po \
 	./$(DEPDIR)/leafpad-file.Po \
 	./$(DEPDIR)/leafpad-font.Po \
-	./$(DEPDIR)/leafpad-gtkprint.Po \
 	./$(DEPDIR)/leafpad-gtksourceiter.Po \
 	./$(DEPDIR)/leafpad-hlight.Po \
 	./$(DEPDIR)/leafpad-indent.Po \
@@ -290,7 +288,6 @@ include ./$(DEPDIR)/leafpad-dnd.Po
 include ./$(DEPDIR)/leafpad-encoding.Po
 include ./$(DEPDIR)/leafpad-file.Po
 include ./$(DEPDIR)/leafpad-font.Po
-include ./$(DEPDIR)/leafpad-gtkprint.Po
 include ./$(DEPDIR)/leafpad-gtksourceiter.Po
 include ./$(DEPDIR)/leafpad-hlight.Po
 include ./$(DEPDIR)/leafpad-indent.Po
@@ -655,28 +652,6 @@ leafpad-dialog.obj: dialog.c
 #	depfile='$(DEPDIR)/leafpad-dialog.Po' tmpdepfile='$(DEPDIR)/leafpad-dialog.TPo' \
 #	$(CCDEPMODE) $(depcomp) \
 #	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-dialog.obj `if test -f 'dialog.c'; then $(CYGPATH_W) 'dialog.c'; else $(CYGPATH_W) '$(srcdir)/dialog.c'; fi`
-
-leafpad-gtkprint.o: gtkprint.c
-	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -MT leafpad-gtkprint.o -MD -MP -MF "$(DEPDIR)/leafpad-gtkprint.Tpo" \
-	  -c -o leafpad-gtkprint.o `test -f 'gtkprint.c' || echo '$(srcdir)/'`gtkprint.c; \
-	then mv -f "$(DEPDIR)/leafpad-gtkprint.Tpo" "$(DEPDIR)/leafpad-gtkprint.Po"; \
-	else rm -f "$(DEPDIR)/leafpad-gtkprint.Tpo"; exit 1; \
-	fi
-#	source='gtkprint.c' object='leafpad-gtkprint.o' libtool=no \
-#	depfile='$(DEPDIR)/leafpad-gtkprint.Po' tmpdepfile='$(DEPDIR)/leafpad-gtkprint.TPo' \
-#	$(CCDEPMODE) $(depcomp) \
-#	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-gtkprint.o `test -f 'gtkprint.c' || echo '$(srcdir)/'`gtkprint.c
-
-leafpad-gtkprint.obj: gtkprint.c
-	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -MT leafpad-gtkprint.obj -MD -MP -MF "$(DEPDIR)/leafpad-gtkprint.Tpo" \
-	  -c -o leafpad-gtkprint.obj `if test -f 'gtkprint.c'; then $(CYGPATH_W) 'gtkprint.c'; else $(CYGPATH_W) '$(srcdir)/gtkprint.c'; fi`; \
-	then mv -f "$(DEPDIR)/leafpad-gtkprint.Tpo" "$(DEPDIR)/leafpad-gtkprint.Po"; \
-	else rm -f "$(DEPDIR)/leafpad-gtkprint.Tpo"; exit 1; \
-	fi
-#	source='gtkprint.c' object='leafpad-gtkprint.obj' libtool=no \
-#	depfile='$(DEPDIR)/leafpad-gtkprint.Po' tmpdepfile='$(DEPDIR)/leafpad-gtkprint.TPo' \
-#	$(CCDEPMODE) $(depcomp) \
-#	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-gtkprint.obj `if test -f 'gtkprint.c'; then $(CYGPATH_W) 'gtkprint.c'; else $(CYGPATH_W) '$(srcdir)/gtkprint.c'; fi`
 
 leafpad-about.o: about.c
 	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -MT leafpad-about.o -MD -MP -MF "$(DEPDIR)/leafpad-about.Tpo" \

@@ -27,10 +27,6 @@
 #include <gtk/gtk.h>
 #include "i18n.h"
 
-#ifndef ENABLE_PRINT
-#define ENABLE_PRINT
-#endif
-
 #include "window.h"
 #include "menu.h"
 #include "callback.h"
@@ -47,9 +43,6 @@
 #include "dialog.h"
 #include "dnd.h"
 #include "utils.h"
-#ifdef ENABLE_PRINT
-#include "gtkprint.h"
-#endif
 
 typedef struct {
 	FileInfo *fi;
