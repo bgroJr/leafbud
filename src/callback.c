@@ -17,10 +17,11 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include "leafpad.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include "leafpad.h"
 
 static void set_selection_bound(GtkTextBuffer *buffer, gint start, gint end)
 {
@@ -292,20 +293,14 @@ void on_help_about(void)
 {
 	const gchar *copyright = "Copyright \xc2\xa9 2004-2008 Tarot Osuji";
 	const gchar *comments = _("GTK+ based simple text editor");
-	const gchar *authors[] = {
-		"Tarot Osuji <tarot@sdf.lonestar.org>",
-		NULL
-	};
+	const gchar *authors[] = { "Tarot Osuji <tarot@sdf.lonestar.org>", NULL };
 	const gchar *translator_credits = _("translator-credits");
 	
-	translator_credits = strcmp(translator_credits, "translator-credits")
-		? translator_credits : NULL;
+	translator_credits = strcmp(translator_credits, "translator-credits")	? translator_credits : NULL;
 	
-	const gchar *artists[] = {
-		"Lapo Calamandrei <calamandrei@gmail.com>",
-		NULL
-	};
-	gtk_show_about_dialog(GTK_WINDOW(pub->mw->window),
+	const gchar *artists[] = { "Lapo Calamandrei <calamandrei@gmail.com>", NULL };
+	
+  gtk_show_about_dialog(GTK_WINDOW(pub->mw->window),
 //		"name", PACKAGE_NAME,
 		"version", PACKAGE_VERSION,
 		"copyright", copyright,

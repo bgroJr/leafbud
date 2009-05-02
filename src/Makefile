@@ -180,8 +180,7 @@ leafpad_SOURCES = \
 	dialog.h dialog.c \
 	dnd.h dnd.c \
 	utils.h utils.c \
-	gtksourceiter.h gtksourceiter.c \
-	i18n.h
+	gtksourceiter.h gtksourceiter.c
 
 
 leafpad_CFLAGS = $(GTK_CFLAGS) $(GNOMEPRINT_CFLAGS)

@@ -1,4 +1,21 @@
-leafpad-callback.o: callback.c leafpad.h ../config.h \
+leafpad-callback.o: callback.c /usr/include/stdio.h \
+  /usr/include/features.h /usr/include/sys/cdefs.h \
+  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-32.h \
+  /usr/lib/gcc/i486-linux-gnu/4.3.2/include/stddef.h \
+  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
+  /usr/lib/gcc/i486-linux-gnu/4.3.2/include/stdarg.h \
+  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
+  /usr/include/bits/stdio.h /usr/include/bits/stdio2.h \
+  /usr/include/stdlib.h /usr/include/sys/types.h /usr/include/time.h \
+  /usr/include/endian.h /usr/include/bits/endian.h \
+  /usr/include/sys/select.h /usr/include/bits/select.h \
+  /usr/include/bits/sigset.h /usr/include/bits/time.h \
+  /usr/include/sys/sysmacros.h /usr/include/bits/pthreadtypes.h \
+  /usr/include/alloca.h /usr/include/bits/stdlib.h /usr/include/string.h \
+  /usr/include/bits/string.h /usr/include/bits/string2.h \
+  /usr/include/bits/string3.h leafpad.h ../config.h \
   /usr/include/gtk-2.0/gtk/gtk.h /usr/include/gtk-2.0/gdk/gdk.h \
   /usr/include/gtk-2.0/gdk/gdkapplaunchcontext.h \
   /usr/include/glib-2.0/gio/gio.h /usr/include/glib-2.0/gio/giotypes.h \
@@ -10,12 +27,9 @@ leafpad-callback.o: callback.c leafpad.h ../config.h \
   /usr/include/glib-2.0/glib/gtypes.h \
   /usr/lib/glib-2.0/include/glibconfig.h \
   /usr/include/glib-2.0/glib/gmacros.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.2/include/stddef.h \
   /usr/lib/gcc/i486-linux-gnu/4.3.2/include-fixed/limits.h \
   /usr/lib/gcc/i486-linux-gnu/4.3.2/include-fixed/syslimits.h \
-  /usr/include/limits.h /usr/include/features.h /usr/include/sys/cdefs.h \
-  /usr/include/bits/wordsize.h /usr/include/gnu/stubs.h \
-  /usr/include/gnu/stubs-32.h /usr/include/bits/posix1_lim.h \
+  /usr/include/limits.h /usr/include/bits/posix1_lim.h \
   /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
   /usr/include/bits/posix2_lim.h \
   /usr/lib/gcc/i486-linux-gnu/4.3.2/include/float.h \
@@ -24,16 +38,13 @@ leafpad-callback.o: callback.c leafpad.h ../config.h \
   /usr/include/glib-2.0/glib/gthread.h \
   /usr/include/glib-2.0/glib/gerror.h /usr/include/glib-2.0/glib/gquark.h \
   /usr/include/glib-2.0/glib/gutils.h \
-  /usr/lib/gcc/i486-linux-gnu/4.3.2/include/stdarg.h \
   /usr/include/glib-2.0/glib/gatomic.h \
   /usr/include/glib-2.0/glib/gbacktrace.h /usr/include/signal.h \
-  /usr/include/bits/sigset.h /usr/include/bits/types.h \
-  /usr/include/bits/typesizes.h /usr/include/bits/signum.h \
-  /usr/include/time.h /usr/include/bits/siginfo.h \
+  /usr/include/bits/signum.h /usr/include/bits/siginfo.h \
   /usr/include/bits/sigaction.h /usr/include/bits/sigcontext.h \
-  /usr/include/bits/sigstack.h /usr/include/bits/pthreadtypes.h \
-  /usr/include/bits/sigthread.h /usr/include/glib-2.0/glib/gbase64.h \
-  /usr/include/glib-2.0/glib/gbookmarkfile.h /usr/include/bits/time.h \
+  /usr/include/bits/sigstack.h /usr/include/bits/sigthread.h \
+  /usr/include/glib-2.0/glib/gbase64.h \
+  /usr/include/glib-2.0/glib/gbookmarkfile.h \
   /usr/include/glib-2.0/glib/gcache.h /usr/include/glib-2.0/glib/glist.h \
   /usr/include/glib-2.0/glib/gmem.h /usr/include/glib-2.0/glib/gslice.h \
   /usr/include/glib-2.0/glib/gchecksum.h \
@@ -144,10 +155,7 @@ leafpad-callback.o: callback.c leafpad.h ../config.h \
   /usr/include/pango-1.0/pango/pango-layout.h \
   /usr/include/pango-1.0/pango/pango-tabs.h \
   /usr/include/pango-1.0/pango/pango-renderer.h \
-  /usr/include/pango-1.0/pango/pango-utils.h /usr/include/stdio.h \
-  /usr/include/libio.h /usr/include/_G_config.h /usr/include/wchar.h \
-  /usr/include/bits/stdio_lim.h /usr/include/bits/sys_errlist.h \
-  /usr/include/bits/stdio.h /usr/include/bits/stdio2.h \
+  /usr/include/pango-1.0/pango/pango-utils.h \
   /usr/lib/gtk-2.0/include/gdkconfig.h \
   /usr/include/gtk-2.0/gdk/gdkdisplay.h \
   /usr/include/gtk-2.0/gdk/gdkevents.h \
@@ -394,15 +402,77 @@ leafpad-callback.o: callback.c leafpad.h ../config.h \
   /usr/include/gtk-2.0/gtk/gtkpreview.h \
   /usr/include/gtk-2.0/gtk/gtktipsquery.h \
   /usr/include/glib-2.0/glib/gi18n.h /usr/include/libintl.h \
-  /usr/include/locale.h /usr/include/bits/locale.h /usr/include/string.h \
-  /usr/include/bits/string.h /usr/include/bits/string2.h \
-  /usr/include/endian.h /usr/include/bits/endian.h /usr/include/stdlib.h \
-  /usr/include/bits/string3.h window.h menu.h callback.h view.h undo.h \
-  font.h linenum.h indent.h hlight.h selector.h file.h encoding.h \
-  search.h dialog.h dnd.h utils.h /usr/include/sys/types.h \
-  /usr/include/sys/select.h /usr/include/bits/select.h \
-  /usr/include/sys/sysmacros.h /usr/include/alloca.h \
-  /usr/include/bits/stdlib.h
+  /usr/include/locale.h /usr/include/bits/locale.h window.h menu.h \
+  callback.h view.h undo.h font.h linenum.h indent.h hlight.h selector.h \
+  file.h encoding.h search.h dialog.h dnd.h utils.h
+
+/usr/include/stdio.h:
+
+/usr/include/features.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/gnu/stubs.h:
+
+/usr/include/gnu/stubs-32.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.3.2/include/stddef.h:
+
+/usr/include/bits/types.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/libio.h:
+
+/usr/include/_G_config.h:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/i486-linux-gnu/4.3.2/include/stdarg.h:
+
+/usr/include/bits/stdio_lim.h:
+
+/usr/include/bits/sys_errlist.h:
+
+/usr/include/bits/stdio.h:
+
+/usr/include/bits/stdio2.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/time.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/bits/sigset.h:
+
+/usr/include/bits/time.h:
+
+/usr/include/sys/sysmacros.h:
+
+/usr/include/bits/pthreadtypes.h:
+
+/usr/include/alloca.h:
+
+/usr/include/bits/stdlib.h:
+
+/usr/include/string.h:
+
+/usr/include/bits/string.h:
+
+/usr/include/bits/string2.h:
+
+/usr/include/bits/string3.h:
 
 leafpad.h:
 
@@ -436,23 +506,11 @@ leafpad.h:
 
 /usr/include/glib-2.0/glib/gmacros.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.3.2/include/stddef.h:
-
 /usr/lib/gcc/i486-linux-gnu/4.3.2/include-fixed/limits.h:
 
 /usr/lib/gcc/i486-linux-gnu/4.3.2/include-fixed/syslimits.h:
 
 /usr/include/limits.h:
-
-/usr/include/features.h:
-
-/usr/include/sys/cdefs.h:
-
-/usr/include/bits/wordsize.h:
-
-/usr/include/gnu/stubs.h:
-
-/usr/include/gnu/stubs-32.h:
 
 /usr/include/bits/posix1_lim.h:
 
@@ -476,23 +534,13 @@ leafpad.h:
 
 /usr/include/glib-2.0/glib/gutils.h:
 
-/usr/lib/gcc/i486-linux-gnu/4.3.2/include/stdarg.h:
-
 /usr/include/glib-2.0/glib/gatomic.h:
 
 /usr/include/glib-2.0/glib/gbacktrace.h:
 
 /usr/include/signal.h:
 
-/usr/include/bits/sigset.h:
-
-/usr/include/bits/types.h:
-
-/usr/include/bits/typesizes.h:
-
 /usr/include/bits/signum.h:
-
-/usr/include/time.h:
 
 /usr/include/bits/siginfo.h:
 
@@ -502,15 +550,11 @@ leafpad.h:
 
 /usr/include/bits/sigstack.h:
 
-/usr/include/bits/pthreadtypes.h:
-
 /usr/include/bits/sigthread.h:
 
 /usr/include/glib-2.0/glib/gbase64.h:
 
 /usr/include/glib-2.0/glib/gbookmarkfile.h:
-
-/usr/include/bits/time.h:
 
 /usr/include/glib-2.0/glib/gcache.h:
 
@@ -763,22 +807,6 @@ leafpad.h:
 /usr/include/pango-1.0/pango/pango-renderer.h:
 
 /usr/include/pango-1.0/pango/pango-utils.h:
-
-/usr/include/stdio.h:
-
-/usr/include/libio.h:
-
-/usr/include/_G_config.h:
-
-/usr/include/wchar.h:
-
-/usr/include/bits/stdio_lim.h:
-
-/usr/include/bits/sys_errlist.h:
-
-/usr/include/bits/stdio.h:
-
-/usr/include/bits/stdio2.h:
 
 /usr/lib/gtk-2.0/include/gdkconfig.h:
 
@@ -1316,20 +1344,6 @@ leafpad.h:
 
 /usr/include/bits/locale.h:
 
-/usr/include/string.h:
-
-/usr/include/bits/string.h:
-
-/usr/include/bits/string2.h:
-
-/usr/include/endian.h:
-
-/usr/include/bits/endian.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/bits/string3.h:
-
 window.h:
 
 menu.h:
@@ -1361,15 +1375,3 @@ dialog.h:
 dnd.h:
 
 utils.h:
-
-/usr/include/sys/types.h:
-
-/usr/include/sys/select.h:
-
-/usr/include/bits/select.h:
-
-/usr/include/sys/sysmacros.h:
-
-/usr/include/alloca.h:
-
-/usr/include/bits/stdlib.h:
