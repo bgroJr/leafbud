@@ -26,6 +26,7 @@ gint on_file_save(void);
 gint on_file_save_as(void);
 void on_file_close(void);
 void on_file_quit(void);
+
 void on_edit_undo(void);
 void on_edit_redo(void);
 void on_edit_cut(void);
@@ -33,16 +34,19 @@ void on_edit_copy(void);
 void on_edit_paste(void);
 void on_edit_delete(void);
 void on_edit_select_all(void);
+
 void on_search_find(void);
 void on_search_find_next(void);
 void on_search_find_previous(void);
 void on_search_replace(void);
 void on_search_jump_to(void);
+
 void on_option_font(void);
 void on_option_word_wrap(void);
 void on_option_line_numbers(void);
 void on_option_always_on_top(void);
 void on_option_auto_indent(void);
+
 void on_help_about(void);
 
 #endif /* _CALLBACK_H */

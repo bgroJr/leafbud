@@ -25,15 +25,16 @@
 
 static void set_selection_bound(GtkTextBuffer *buffer, gint start, gint end)
 {
-	GtkTextIter start_iter, end_iter;
-	
-	gtk_text_buffer_get_iter_at_offset(buffer, &start_iter, start);
-	if (end < 0)
-		gtk_text_buffer_get_end_iter(buffer, &end_iter);
-	else
-		gtk_text_buffer_get_iter_at_offset(buffer, &end_iter, end);
-	gtk_text_buffer_place_cursor(buffer, &end_iter);
-	gtk_text_buffer_move_mark_by_name(buffer, "selection_bound", &start_iter);
+  GtkTextIter start_iter, end_iter;
+  gtk_text_buffer_get_iter_at_offset(buffer, &start_iter, start);
+
+  if (end < 0)
+    gtk_text_buffer_get_end_iter(buffer, &end_iter);
+  else
+    gtk_text_buffer_get_iter_at_offset(buffer, &end_iter, end);
+  
+  gtk_text_buffer_place_cursor(buffer, &end_iter);
+  gtk_text_buffer_move_mark_by_name(buffer, "selection_bound", &start_iter);
 }
 
 void on_file_new(void)
