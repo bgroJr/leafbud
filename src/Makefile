@@ -181,7 +181,6 @@ leafpad_SOURCES = \
 	gtkprint.h gtkprint.c \
 	dnd.h dnd.c \
 	utils.h utils.c \
-	emacs.h emacs.c \
 	gtksourceiter.h gtksourceiter.c \
 	i18n.h
 
@@ -205,7 +204,7 @@ am_leafpad_OBJECTS = leafpad-main.$(OBJEXT) leafpad-window.$(OBJEXT) \
 	leafpad-encoding.$(OBJEXT) leafpad-search.$(OBJEXT) \
 	leafpad-dialog.$(OBJEXT) leafpad-gtkprint.$(OBJEXT) \
 	leafpad-dnd.$(OBJEXT) leafpad-utils.$(OBJEXT) \
-	leafpad-emacs.$(OBJEXT) leafpad-gtksourceiter.$(OBJEXT)
+	leafpad-gtksourceiter.$(OBJEXT)
 leafpad_OBJECTS = $(am_leafpad_OBJECTS)
 leafpad_DEPENDENCIES =
 leafpad_LDFLAGS =
@@ -217,7 +216,6 @@ DEP_FILES = ./$(DEPDIR)/leafpad-about.Po \
 	./$(DEPDIR)/leafpad-callback.Po \
 	./$(DEPDIR)/leafpad-dialog.Po \
 	./$(DEPDIR)/leafpad-dnd.Po \
-	./$(DEPDIR)/leafpad-emacs.Po \
 	./$(DEPDIR)/leafpad-encoding.Po \
 	./$(DEPDIR)/leafpad-file.Po \
 	./$(DEPDIR)/leafpad-font.Po \
@@ -289,7 +287,6 @@ include ./$(DEPDIR)/leafpad-about.Po
 include ./$(DEPDIR)/leafpad-callback.Po
 include ./$(DEPDIR)/leafpad-dialog.Po
 include ./$(DEPDIR)/leafpad-dnd.Po
-include ./$(DEPDIR)/leafpad-emacs.Po
 include ./$(DEPDIR)/leafpad-encoding.Po
 include ./$(DEPDIR)/leafpad-file.Po
 include ./$(DEPDIR)/leafpad-font.Po
@@ -746,28 +743,6 @@ leafpad-utils.obj: utils.c
 #	depfile='$(DEPDIR)/leafpad-utils.Po' tmpdepfile='$(DEPDIR)/leafpad-utils.TPo' \
 #	$(CCDEPMODE) $(depcomp) \
 #	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-utils.obj `if test -f 'utils.c'; then $(CYGPATH_W) 'utils.c'; else $(CYGPATH_W) '$(srcdir)/utils.c'; fi`
-
-leafpad-emacs.o: emacs.c
-	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -MT leafpad-emacs.o -MD -MP -MF "$(DEPDIR)/leafpad-emacs.Tpo" \
-	  -c -o leafpad-emacs.o `test -f 'emacs.c' || echo '$(srcdir)/'`emacs.c; \
-	then mv -f "$(DEPDIR)/leafpad-emacs.Tpo" "$(DEPDIR)/leafpad-emacs.Po"; \
-	else rm -f "$(DEPDIR)/leafpad-emacs.Tpo"; exit 1; \
-	fi
-#	source='emacs.c' object='leafpad-emacs.o' libtool=no \
-#	depfile='$(DEPDIR)/leafpad-emacs.Po' tmpdepfile='$(DEPDIR)/leafpad-emacs.TPo' \
-#	$(CCDEPMODE) $(depcomp) \
-#	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-emacs.o `test -f 'emacs.c' || echo '$(srcdir)/'`emacs.c
-
-leafpad-emacs.obj: emacs.c
-	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -MT leafpad-emacs.obj -MD -MP -MF "$(DEPDIR)/leafpad-emacs.Tpo" \
-	  -c -o leafpad-emacs.obj `if test -f 'emacs.c'; then $(CYGPATH_W) 'emacs.c'; else $(CYGPATH_W) '$(srcdir)/emacs.c'; fi`; \
-	then mv -f "$(DEPDIR)/leafpad-emacs.Tpo" "$(DEPDIR)/leafpad-emacs.Po"; \
-	else rm -f "$(DEPDIR)/leafpad-emacs.Tpo"; exit 1; \
-	fi
-#	source='emacs.c' object='leafpad-emacs.obj' libtool=no \
-#	depfile='$(DEPDIR)/leafpad-emacs.Po' tmpdepfile='$(DEPDIR)/leafpad-emacs.TPo' \
-#	$(CCDEPMODE) $(depcomp) \
-#	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-emacs.obj `if test -f 'emacs.c'; then $(CYGPATH_W) 'emacs.c'; else $(CYGPATH_W) '$(srcdir)/emacs.c'; fi`
 
 leafpad-gtksourceiter.o: gtksourceiter.c
 	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -MT leafpad-gtksourceiter.o -MD -MP -MF "$(DEPDIR)/leafpad-gtksourceiter.Tpo" \

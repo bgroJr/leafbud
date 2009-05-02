@@ -47,7 +47,6 @@
 #include "dialog.h"
 #include "dnd.h"
 #include "utils.h"
-#include "emacs.h"
 #ifdef ENABLE_PRINT
 #include "gtkprint.h"
 #endif
