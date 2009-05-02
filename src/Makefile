@@ -211,8 +211,7 @@ leafpad_LDFLAGS =
 DEFAULT_INCLUDES =  -I. -I$(srcdir) -I$(top_builddir)
 depcomp = $(SHELL) $(top_srcdir)/depcomp
 am__depfiles_maybe = depfiles
-DEP_FILES = ./$(DEPDIR)/leafpad-about.Po \
-	./$(DEPDIR)/leafpad-callback.Po \
+DEP_FILES = ./$(DEPDIR)/leafpad-callback.Po \
 	./$(DEPDIR)/leafpad-dialog.Po \
 	./$(DEPDIR)/leafpad-dnd.Po \
 	./$(DEPDIR)/leafpad-encoding.Po \
@@ -281,7 +280,6 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/leafpad-about.Po
 include ./$(DEPDIR)/leafpad-callback.Po
 include ./$(DEPDIR)/leafpad-dialog.Po
 include ./$(DEPDIR)/leafpad-dnd.Po
@@ -652,28 +650,6 @@ leafpad-dialog.obj: dialog.c
 #	depfile='$(DEPDIR)/leafpad-dialog.Po' tmpdepfile='$(DEPDIR)/leafpad-dialog.TPo' \
 #	$(CCDEPMODE) $(depcomp) \
 #	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-dialog.obj `if test -f 'dialog.c'; then $(CYGPATH_W) 'dialog.c'; else $(CYGPATH_W) '$(srcdir)/dialog.c'; fi`
-
-leafpad-about.o: about.c
-	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -MT leafpad-about.o -MD -MP -MF "$(DEPDIR)/leafpad-about.Tpo" \
-	  -c -o leafpad-about.o `test -f 'about.c' || echo '$(srcdir)/'`about.c; \
-	then mv -f "$(DEPDIR)/leafpad-about.Tpo" "$(DEPDIR)/leafpad-about.Po"; \
-	else rm -f "$(DEPDIR)/leafpad-about.Tpo"; exit 1; \
-	fi
-#	source='about.c' object='leafpad-about.o' libtool=no \
-#	depfile='$(DEPDIR)/leafpad-about.Po' tmpdepfile='$(DEPDIR)/leafpad-about.TPo' \
-#	$(CCDEPMODE) $(depcomp) \
-#	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-about.o `test -f 'about.c' || echo '$(srcdir)/'`about.c
-
-leafpad-about.obj: about.c
-	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -MT leafpad-about.obj -MD -MP -MF "$(DEPDIR)/leafpad-about.Tpo" \
-	  -c -o leafpad-about.obj `if test -f 'about.c'; then $(CYGPATH_W) 'about.c'; else $(CYGPATH_W) '$(srcdir)/about.c'; fi`; \
-	then mv -f "$(DEPDIR)/leafpad-about.Tpo" "$(DEPDIR)/leafpad-about.Po"; \
-	else rm -f "$(DEPDIR)/leafpad-about.Tpo"; exit 1; \
-	fi
-#	source='about.c' object='leafpad-about.obj' libtool=no \
-#	depfile='$(DEPDIR)/leafpad-about.Po' tmpdepfile='$(DEPDIR)/leafpad-about.TPo' \
-#	$(CCDEPMODE) $(depcomp) \
-#	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -c -o leafpad-about.obj `if test -f 'about.c'; then $(CYGPATH_W) 'about.c'; else $(CYGPATH_W) '$(srcdir)/about.c'; fi`
 
 leafpad-dnd.o: dnd.c
 	if $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(leafpad_CFLAGS) $(CFLAGS) -MT leafpad-dnd.o -MD -MP -MF "$(DEPDIR)/leafpad-dnd.Tpo" \

@@ -25,7 +25,7 @@
 #endif
 
 #include <gtk/gtk.h>
-#include "i18n.h"
+#include <glib/gi18n.h>
 
 #include "window.h"
 #include "menu.h"

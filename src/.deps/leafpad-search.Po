@@ -395,7 +395,7 @@ leafpad-search.o: search.c /usr/include/string.h /usr/include/features.h \
   /usr/include/gtk-2.0/gtk/gtkoldeditable.h \
   /usr/include/gtk-2.0/gtk/gtkoptionmenu.h \
   /usr/include/gtk-2.0/gtk/gtkpreview.h \
-  /usr/include/gtk-2.0/gtk/gtktipsquery.h i18n.h \
+  /usr/include/gtk-2.0/gtk/gtktipsquery.h \
   /usr/include/glib-2.0/glib/gi18n.h /usr/include/libintl.h \
   /usr/include/locale.h /usr/include/bits/locale.h dialog.h utils.h \
   view.h undo.h gtksourceiter.h search.h hlight.h
@@ -1315,8 +1315,6 @@ leafpad-search.o: search.c /usr/include/string.h /usr/include/features.h \
 /usr/include/gtk-2.0/gtk/gtkpreview.h:
 
 /usr/include/gtk-2.0/gtk/gtktipsquery.h:
-
-i18n.h:
 
 /usr/include/glib-2.0/glib/gi18n.h:
 

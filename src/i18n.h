@@ -20,26 +20,6 @@
 #ifndef _I18N_H
 #define _I18N_H
 
-#if GLIB_CHECK_VERSION(2, 4, 0)
-#	include <glib/gi18n.h>
-#else
-
-#ifdef ENABLE_NLS
-#	include <libintl.h>
-#	define _(String) gettext(String)
-#	ifdef gettext_noop
-#		define N_(String) gettext_noop(String)
-#	else
-#		define N_(String) (String)
-#	endif
-#else
-#	define _(String) (String)
-#	define N_(String) (String)
-#	define bindtextdomain(Domain, Directory)
-#	define bind_textdomain_codeset(Domain, Codeset)
-#	define textdomain(Domain)
-#endif
-
-#endif
+#include <glib/gi18n.h>
 
 #endif /* _I18N_H */

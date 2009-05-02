@@ -17,15 +17,17 @@
  *  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#include <gtk/gtk.h>
 #include <stdio.h>
 #include <string.h>
+
+#include <gtk/gtk.h>
+#include <glib/gi18n.h>
+
 #include "file.h"
 #include "view.h"
 #include "encoding.h"
 #include "dialog.h"
 #include "menu.h"
-#include "i18n.h"
 //#include "undo.h"
 
 gboolean check_file_writable(gchar *filename)

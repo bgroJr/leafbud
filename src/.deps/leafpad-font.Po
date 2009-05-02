@@ -392,7 +392,7 @@ leafpad-font.o: font.c leafpad.h ../config.h \
   /usr/include/gtk-2.0/gtk/gtkoldeditable.h \
   /usr/include/gtk-2.0/gtk/gtkoptionmenu.h \
   /usr/include/gtk-2.0/gtk/gtkpreview.h \
-  /usr/include/gtk-2.0/gtk/gtktipsquery.h i18n.h \
+  /usr/include/gtk-2.0/gtk/gtktipsquery.h \
   /usr/include/glib-2.0/glib/gi18n.h /usr/include/libintl.h \
   /usr/include/locale.h /usr/include/bits/locale.h /usr/include/string.h \
   /usr/include/bits/string.h /usr/include/bits/string2.h \
@@ -1304,8 +1304,6 @@ leafpad.h:
 /usr/include/gtk-2.0/gtk/gtkpreview.h:
 
 /usr/include/gtk-2.0/gtk/gtktipsquery.h:
-
-i18n.h:
 
 /usr/include/glib-2.0/glib/gi18n.h:
 
